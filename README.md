@@ -13,11 +13,11 @@ This application is designed to help you build better README.md files.
 
 To install this project, run the following commands:
 
-`git clone https://github.com/tanzeyl/make-read-me.git`
-
-`cd make-read-me`
-
-`npm i && npm start`
+````bash
+  git clone https://github.com/tanzeyl/make-read-me.git
+  cd make-read-me
+  npm i && npm start
+````
 
 If you have any feedback, please reach out to me at tanzeyl.khan@gmail.com
 
