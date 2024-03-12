@@ -1,0 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap");
+
+.textEditorBody {
+  font-family: "Source Code Pro", monospace;
+}
+
+.textarea {
+  height: 82vh;
+  width: 40vw;
+  resize: none;
+  background-color: rgb(19, 18, 18);
+  color: #008000;
+  padding: 2%;
+}

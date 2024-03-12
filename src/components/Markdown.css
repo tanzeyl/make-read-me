@@ -1,0 +1,27 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap");
+
+.markdownBody {
+  height: 82vh;
+  width: 31vw;
+  padding: 3%;
+  border: 1px solid grey;
+  border-radius: 10px;
+  overflow: scroll;
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+table,
+tr,
+td,
+th {
+  border: 1px solid grey;
+  width: 25vw;
+  text-align: center;
+}
+
+td,
+th {
+  padding: 2%;
+}
