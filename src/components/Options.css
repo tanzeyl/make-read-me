@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
 
 body {
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(255, 126, 126);
 }
 
 * {
@@ -10,9 +10,10 @@ body {
 }
 
 .optionsContainer {
-  height: 82vh;
+  height: 89vh;
   overflow: auto;
   font-family: "Raleway", sans-serif;
+  color: white;
 }
 
 .options {
@@ -22,7 +23,7 @@ body {
   margin: 2% 0;
   box-shadow: 1px 1px 0px 0px #414141;
   cursor: pointer;
-  background-color: rgb(145, 255, 0);
+  background-color: rgb(108 190 0);
 }
 
 .selectedOptions {

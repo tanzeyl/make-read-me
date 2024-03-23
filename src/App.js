@@ -6,7 +6,8 @@ import Markdown from "./components/Markdown";
 import Navbar from "./components/Navbar";
 
 function App() {
-  const [input, setInput] = useState("");
+  const [input, setInput] = useState([]);
+  const [stringInput, setstringInput] = useState("");
   const [allOptions, setAllOptions] = useState([
     {
       title: "Title and Description",
@@ -144,13 +145,18 @@ function App() {
             setAllOptions={setAllOptions}
             setInput={setInput}
             input={input}
+            setstringInput={setstringInput}
+            stringInput={stringInput}
           />
         </div>
         <div className="col-md-5">
-          <TextEditor setInput={setInput} input={input} />
+          <TextEditor
+            setstringInput={setstringInput}
+            stringInput={stringInput}
+          />
         </div>
         <div className="col-md-4">
-          <Markdown input={input} />
+          <Markdown input={stringInput} />
         </div>
       </div>
     </>

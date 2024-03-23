@@ -6,10 +6,12 @@ const Options = (props) => {
   const [data, setData] = useState(props.options);
 
   const handleClick = (title, markdown, id) => {
-    if (props.input.length !== 0) {
-      props.setInput(props.input + "\n\n" + markdown);
+    let newInput = { title, markdown };
+    props.setInput([...props.input, newInput]);
+    if (props.stringInput.length !== 0) {
+      props.setstringInput(props.stringInput + "\n\n" + markdown);
     } else {
-      props.setInput(markdown);
+      props.setstringInput(markdown);
     }
     const newObj = { title: title };
     if (!optionList.some((obj) => obj.title === newObj.title)) {
@@ -35,8 +37,10 @@ const Options = (props) => {
     const filteredOptionList = optionList.filter(
       (option) => option.title !== item.title
     );
+    const newInput = props.input.filter((ins) => ins.title !== item.title);
     setOptionList(filteredOptionList);
     setData([...data, item]);
+    props.setInput(newInput);
   };
 
   return (

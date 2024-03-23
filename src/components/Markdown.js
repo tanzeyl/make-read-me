@@ -5,14 +5,24 @@ import rehypeRaw from "rehype-raw";
 import "./Markdown.css";
 
 const Markdown = (props) => {
-  const input = props.input;
+  const saveFile = () => {
+    const blob = new Blob([props.input], { type: "text/plain" });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = "README.md";
+    a.click();
+    URL.revokeObjectURL(url);
+  };
 
   return (
     <>
-      Preview
-      <div class="container markdownBody">
+      <button className="btn btn-md btn-success mx-3 my-2" onClick={saveFile}>
+        Download
+      </button>
+      <div className="container markdownBody" id="scrollBarHide">
         <ReactMarkdown remarkPlugins={[remarkGfm]} rehypePlugins={[rehypeRaw]}>
-          {input}
+          {props.input}
         </ReactMarkdown>
       </div>
     </>
